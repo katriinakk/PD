@@ -1,9 +1,12 @@
 body {
-    background: HoneyDew;
+    background: rgb(240,255,240);
+    background: radial-gradient(circle, rgba(240,255,240,1) 60%, rgba(236,255,196,1) 100%);
 }
 
 .div1 {
-    background-color: olivedrab;
+    background: rgb(107,142,35);
+    background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
+    border-radius: 15px;
     color: HoneyDew;
     font-family: "Optima", "Geneva", sans-serif;
     width: auto;
@@ -12,89 +15,39 @@ body {
     text-align: center;
 }
 
-.div2 {
-    position:absolute;
-    right: 0.5%;
-    top: 26%;
-    background-color: olivedrab;
-    color: HoneyDew;
-    font-family: "Optima", "Geneva", sans-serif;
-    width: 10%;
-    height: 52%;
-    font-size: 120%;
-    padding: 3%;
-    text-align:center;
-    align-content: right;
-}
 
-.div3 {
+
+.div2 {
+    background: rgb(107,142,35);
+    background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
+    border-radius: 15px;
     position:absolute;
-    left: 0.5%;
-    top: 26%;
-    background-color: olivedrab;
-    color: HoneyDew;
+    left: 72%;
+    top: 27%;
+    color: honeydew;
     font-family: "Optima", "Geneva", sans-serif;
     width: 10%;
-    height: 52%;
+    height: 480px;
     font-size: 120%;
     padding: 3%;
-    text-align:center;
-    align-content: right;
+    text-align: center;
 }
 
 /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_column_cards*/
 
-
-/*
-.column {
-    position: relative;
-    left: 24%;
-    float:left;
-    width: 5%;
-    height: 5%;
-    padding: 5%;
-}
-
-.row {
-    position: relative;
-    margin: -3% 0
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-    align-items: center;
-  }
-
-.row img {
-    position: relative;
-    background-color: olivedrab;
-    padding: 5%
-}
-
-.row p {
-    position: relative;
-    text-align: center;
-    font-size: 120%;
-    font-family: "Optima", "Geneva", sans-serif;
-    background-color: brown;
-    color: seashell;
-    height: 200%;
-    width: 210%;
-}*/
-
 .grid {
     position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10%;
     padding: 1.5%;
     left: 27%;
     width: 40%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10%;
+
 }
 
 .grid img {
+    border-radius: 15px;
     width: 100%;
     height: 80%;
     padding: 1%;
@@ -107,7 +60,38 @@ body {
 }
 
 .grid div {
-    background-color: olivedrab;
+    background: rgb(107,142,35);
+    background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
+    border-radius: 15px;
     padding: 8%;
     align-items: center;
+}
+
+
+.orch {
+    position:absolute;
+    transform: rotate(20deg);
+    top: 80%;
+    left: 75%;
+    width: 45%;
+    height: 80%;
+}
+
+.lemon {
+    position:absolute;
+    transform: scaleX(-1);
+    transform: rotate(20deg);
+    top: 80%;
+    right: 0;
+    width: 45%;
+    height: 80%;
+}
+
+.avo {
+    position:absolute;
+    transform: rotate(20deg);
+    top: 22%;
+    left: 8%;
+    width: 45%;
+    height: 80%;
 }
