@@ -1,0 +1,35 @@
+{"augi": [
+    {
+      "Name": "Fikuss",
+      "Soil": "1/5 perlīts, 1/5 komposts, 3/5 kokosšķiedras",
+      "Fertilizer": "Universālais mēslojums",
+      "PPrice": 59.23,
+      "PPriceMAX": 173.91,
+      "FPrice": 1.74,
+      "SPrice": 18.89,
+      "Liters": 25,
+      "Level": 4
+    },
+    {
+      "Name": "Citronkoks",
+      "Soil": "1/5 perlīts, 1/5 komposts, 3/5 kokosšķiedras",
+      "Fertilizer": "Citrusaugu mēslojums",
+      "PPrice": 35.00,
+      "PPriceMAX": 44.99,
+      "FPrice": 4.29,
+      "SPrice": 15.12,
+      "Liters": 20,
+      "Level": 2.50
+    },
+    {
+      "Name": "Kaktuss",
+      "Soil": "Gatavā kaktusa augsne",
+      "Fertilizer": "Nav obligāts",
+      "PPrice": 5.00,
+      "PPriceMAX": 10.00,
+      "FPrice": 0,
+      "SPrice": 1.99,
+      "Liters": 3,
+      "Level": 1
+    }
+  ]}

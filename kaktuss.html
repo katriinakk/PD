@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css"/>
+        <title>Citronkoks</title> 
+    </head>
+
+    <body>
+        <input type="file" id="augi" accept=".csv" />
+        <pre id="output"></pre>
+
+        <script>
+            document.getElementById('augi').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const content = e.target.result;
+                    document.getElementById('output').innerText = content;
+                };
+                reader.readAsText(file);
+            }
+        });
+        </script>
+    </body>
+
+</html>

@@ -53,7 +53,7 @@ body {
     padding: 1%;
 }
 
-.grid p {
+.grid a {
     font-size: 120%;
     text-align: center;
     color: honeydew;
@@ -79,9 +79,8 @@ body {
 
 .lemon {
     position:absolute;
-    transform: scaleX(-1);
     transform: rotate(20deg);
-    top: 80%;
+    top: 58%;
     right: 0;
     width: 45%;
     height: 80%;
