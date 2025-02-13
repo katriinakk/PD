@@ -3,107 +3,92 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css"/>
-        <title>Citronkoks</title> 
-        <script src=
-        "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        <title>Kaktuss</title> 
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
        </script>
     </head>
-
+        
     <body>
         <div class = "div1">Kaktuss</div>
         <div class="main"><img src="cacti.png">
-        <p id="demo"> </p> <!--https://www.w3schools.com/js/js_output.asp-->
-        <p class ="main">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br></p>
-        <hr></div>
 
+        <a class="main" href="index.html">←Atpakaļ←</a>
 
-<!--https://www.geeksforgeeks.org/how-to-convert-json-data-to-a-html-table-using-javascript-jquery/-->
-<script>
-    let el_up = document.getElementById("GFG_UP");
-
-    let list = [
-    {
-      "Name": "Kaktuss",
-      "Soil": "Gatavā kaktusa augsne",
-      "Fertilizer": "Nav obligāts",
-      "PPrice": 5.00,
-      "PPriceMAX": 10.00,
-      "FPrice": 0,
-      "SPrice": 1.99,
-      "Liters": 3,
-      "Level": 1
-    }
-    ];
-    function delet() {
-        const element = document.getElementById("demo")
-        element.remove()
-    }
-    function constructTable(selector) {
-
-        // Getting the all column names
-        let cols = Headers(list, selector);
-
-        // Traversing the JSON data
-        for (let i = 0; i < list.length; i++) {
-            let row = $('<tr/>');
-            for (let colIndex = 0; colIndex < cols.length; colIndex++) {
-                let val = list[i][cols[colIndex]];
-
-                // If there is any key, which is matching
-                // with the column name
-                if (val == null) val = "";
-                row.append($('<td/>').html(val));
+        <!--https://www.w3schools.com/js/js_output.asp-->
+        <p >Par kaktusu ir ļoti viegli rūpēties, tāpēc tas ir ļoti iecienīts telpaugs.<br>
+            Neskatoties uz to, kaktusiem ir ļoti duadz variācijas, piemēram, forma (garena,<br>
+            apaļa, plakana) un dažiem arī piemīts ziedi. Kaktuss ir ļoti draudzīgs iesācējiem<br></p>
+        </div>
+        <br>
+        <hr>
+        <!--https://www.geeksforgeeks.org/how-to-convert-json-data-to-a-html-table-using-javascript-jquery/-->
+        <script>
+            let tabula = document.getElementById("a");
+            let list = [{
+                "Name": "Kaktuss",
+                "Augsne": "Gatavā kaktusa augsne",
+                "Mēslojums": "Nav obligāts",
+                "Auga vid. cena": "6.00€",
+                "Augsnes vid. cena": "1.99€",
+                "Mēslojuma vid. cena": "---",
+                "Ieteicamais augsnes daudzums (litros)": 3,
+                "Iesācēju draudzīguma skala": "5/5☆"
+            }]
+            function delet() {
+                const element = document.getElementById("demo")
+                element.remove()
+                document.getElementById("a").innerHTML = "Vispārīgā informācija"
+                document.getElementById("b").innerHTML = "Ieteikumi"
+                document.getElementById("c").innerHTML = "Vispārīgā informācija"
             }
-            
-            // Adding each row to the table
-            $(selector).append(row);
-
-            
-        }
-    }
-
-
-    function Headers(list, selector) {
-        let columns = [];
-        let header = $('<tr/>');
-
-        for (let i = 0; i < list.length; i++) {
-            let row = list[i];
-
-            for (let k in row) {
-                if ($.inArray(k, columns) == -1) {
-                    columns.push(k);
-
-                    // Creating the header
-                    header.append($('<th/>').html(k));
+            function Table(selector) {
+            // Getting the all column names
+            let cols = Headers(list, selector);
+                // Traversing the JSON data
+                for (let i = 0; i < list.length; i++) {
+                    let row = $('<tr/>');
+                        for (let colIndex = 0; colIndex < cols.length; colIndex++) {
+                            let val = list[i][cols[colIndex]];
+                            row.append($('<td/>').html(val));
+                        }
+                    // Adding each row to the table
+                    $(selector).append(row);
                 }
             }
-        }
+            function Headers(list, selector) {
+                let columns = [];
+                let header = $('<tr/>');
+                for (let i = 0; i < list.length; i++) {
+                    let row = list[i];
+                    for (let k in row) {
+                        if ($.inArray(k, columns) == -1) {
+                        columns.push(k);
+                        // Creating the header
+                        header.append($('<th/>').html(k));
+                        }
+                    }
+                }
+                $(selector).append(header);
+                return columns;
+            }
+        </script>
 
-        // Appending the header to the table
-        $(selector).append(header);
-        return columns;
-    }       
+        <h1 id="a"></h1>
 
-</script>
-<p id="GFG_UP">
-</p>
+        <div class="container">
+            <div class="center">
+                <button class="main" id="demo" onclick="delet('#button');Table('#table')">
+                    ↓Papildus informācija↓
+                </button>
+            </div>
+        </div>
 
-<!--https://www.w3schools.com/howto/howto_css_center_button.asp-->
-<div class="container">
-    <div class="center">
-<button class="main" width:100% id="demo" onclick="delet('#button');constructTable('#table')">
-    ↓Papildus informācija↓
-</button>
-</div>
-</div>
+        <table align="center" id="table">
+        </table>
 
-<br><br>
+        <h1 id="b"></h1>
 
-<table align="center" id="table" border="1">
-</table>
+        <p id="c"></p>
     </body>
 
 </html>

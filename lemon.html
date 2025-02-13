@@ -3,11 +3,92 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css"/>
-        <title>Lemon</title> 
+        <title>Citronkoks</title> 
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+       </script>
     </head>
-
+        
     <body>
-       
+        <div class = "div1">Citronkoks</div>
+        <div class="main"><img src="lemon.png">
+
+        <a class="main" href="index.html">←Atpakaļ←</a>
+ 
+        <!--https://www.w3schools.com/js/js_output.asp-->
+        <p >Citronkoks ir citrus augs, kas ražo augļus, kurus mēs bieži izmantojam pārtikā. Citronā ir<br>
+            ļoti daudz C vitamīnu, tāpēc tas arī ir ļoti veselīgs. Daudzi citronu pieliek pie savas<br>
+            tējas vai pieliek ēdienā, lai pastiprinātu garšu. Labā ziņa ir tāda, ka citronkoks ir telpaugs.<br></p>
+        </div>
+        <br>
+        <hr>
+        <!--https://www.geeksforgeeks.org/how-to-convert-json-data-to-a-html-table-using-javascript-jquery/-->
+        <script>
+            let tabula = document.getElementById("a");
+            let list = [{
+                "Augsne": "1/5 perlīts, 1/5 komposts, 3/5 kokosšķiedras",
+                "Mēslojums": "Citrusaugu mēslojums",
+                "Auga vid. cena": "37.00€",
+                "Mēslojuma vid. cena": "5.00€",
+                "Augsnes vid. cena": "15.12€",
+                "Ieteicamais augsnes daudzums (litros)": 20,
+                "Iesācēju draudzīguma skala": "2.5/5☆"
+            }]
+            function delet() {
+                const element = document.getElementById("demo")
+                element.remove()
+                document.getElementById("a").innerHTML = "Vispārīgā informācija"
+                document.getElementById("b").innerHTML = "Ieteikumi"
+                document.getElementById("c").innerHTML = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>"
+            }
+            function Table(selector) {
+            // Getting the all column names
+            let cols = Headers(list, selector);
+                // Traversing the JSON data
+                for (let i = 0; i < list.length; i++) {
+                    let row = $('<tr/>');
+                        for (let colIndex = 0; colIndex < cols.length; colIndex++) {
+                            let val = list[i][cols[colIndex]];
+                            row.append($('<td/>').html(val));
+                        }
+                    // Adding each row to the table
+                    $(selector).append(row);
+                }
+            }
+            function Headers(list, selector) {
+                let columns = [];
+                let header = $('<tr/>');
+                for (let i = 0; i < list.length; i++) {
+                    let row = list[i];
+                    for (let k in row) {
+                        if ($.inArray(k, columns) == -1) {
+                        columns.push(k);
+                        // Creating the header
+                        header.append($('<th/>').html(k));
+                        }
+                    }
+                }
+                $(selector).append(header);
+                return columns;
+            }
+        </script>
+
+        <h1 id="a"></h1>
+
+        <div class="container">
+            <div class="center">
+                <button class="main" id="demo" onclick="delet('#button');Table('#table')">
+                    ↓Papildus informācija↓
+                </button>
+            </div>
+        </div>
+
+        <table align="center" id="table">
+        </table>
+
+        <h1 id="b"></h1>
+
+        <p id="c"></p>
+
     </body>
 
 </html>

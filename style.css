@@ -2,7 +2,6 @@ body {
     background: rgb(240,255,240);
     background: radial-gradient(circle, rgba(240,255,240,1) 60%, rgba(236,255,196,1) 100%);
 }
-
 .div1 {
     background: rgb(107,142,35);
     background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
@@ -14,9 +13,6 @@ body {
     font-size: 160%;
     text-align: center;
 }
-
-
-
 .div2 {
     background: rgb(107,142,35);
     background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
@@ -24,17 +20,19 @@ body {
     position:absolute;
     left: 72%;
     top: 27%;
-    color: honeydew;
-    font-family: "Optima", "Geneva", sans-serif;
     width: 10%;
     height: 480px;
-    font-size: 120%;
     padding: 3%;
-    text-align: center;
 }
+.div2 a {
+    position:relative;
+    color: honeydew;
+    font-family: "Optima", "Geneva", sans-serif;
+    font-size: 120%;
+    text-align: center;
 
+}
 /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_column_cards*/
-
 .grid {
     position: relative;
     grid-template-columns: repeat(3, 1fr);
@@ -43,9 +41,7 @@ body {
     left: 27%;
     width: 40%;
     display: grid;
-
 }
-
 .grid img {
     border-radius: 15px;
     width: 100%;
@@ -53,14 +49,12 @@ body {
     padding: 1%;
     z-index: 1;
 }
-
 .grid a {
     font-size: 120%;
     text-align: center;
     color: honeydew;
     z-index: 1;
 }
-
 .grid div {
     background: rgb(107,142,35);
     background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
@@ -68,8 +62,6 @@ body {
     padding: 8%;
     align-items: center;
 }
-
-
 .orch {
     position:absolute;
     transform: rotate(20deg);
@@ -77,9 +69,7 @@ body {
     left: 75%;
     width: 45%;
     height: 80%;
-
 }
-
 .lemon {
     position:absolute;
     transform: rotate(20deg);
@@ -89,7 +79,6 @@ body {
     height: 80%;
     z-index: -1;
 }
-
 .avo {
     position:absolute;
     transform: rotate(20deg);
@@ -97,9 +86,7 @@ body {
     left: 8%;
     width: 45%;
     height: 80%;
-
 }
-
 /*https://www.w3schools.com/howto/howto_css_image_center.asp*/
 .main img{
     border-radius: 15px!important;
@@ -108,33 +95,108 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 15%;
-    padding: 2%;
-    
+    padding: 1%;
 }
 .main p {
     text-align: center;
     color: #3D1F1F;
     font-family: "Optima", "Geneva", sans-serif;
-    font-size: 120%;
-
+    font-size: 100%;
 }
-
-
-
 .container {
     height: 200px;
     position: relative;
-
-  }
-  
-  .center {
+}
+.center {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
-  button {
-   transform: scale(2)
-  }
+}
+button {
+   transform: scale(1.5)
+}
+th, tr, td {
+    border: solid 2px #3D1F1F;
+
+}
+th {
+    border: solid 4px DarkRed;
+    background-color: Indianred;
+    color: honeydew;
+    font-family: "Optima", "Geneva", sans-serif;
+    font-size: 90%;
+}
+td {
+    color: #3D1F1F;
+    font-family: "Optima", "Geneva", sans-serif;
+    font-size: 90%;
+    text-align: center;
+    padding: 2px;
+    background-color: honeydew;
+}
+table {
+    margin-top:-10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.visp {
+    color: #3D1F1F;
+    font-family: "Optima", "Geneva", sans-serif;
+    font-size: 120%;
+    text-align: center;
+}
+h1 {
+    font-size: 120%;
+    color: #3D1F1F;
+    font-family: "Optima", "Geneva", sans-serif;
+    text-align: center;
+}
+p{
+    text-align: center;
+    color: #3D1F1F;
+    font-family: "Optima", "Geneva", sans-serif;
+    font-size: 100%;
+}
+
+.main a {
+    position: absolute;
+    font-size: 100%;
+    color: honeydew;
+    font-family: "Optima", "Geneva", sans-serif;
+    top: 25%;
+    left:2%;
+    background-color: indianred;
+    border-radius: 10px;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+}
+.grid2 {
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10%;
+    padding: 2%;
+    left: 27%;
+    width: 40%;
+    display: grid;
+    transform: scale(1.4)
+}
+.grid2 img {
+    border-radius: 15px;
+    width: 100%;
+    height: 80%;
+    padding: 1%;
+    z-index: 1;
+}
+.grid2 div {
+    background: rgb(107,142,35);
+    background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
+    border-radius: 15px;
+    padding: 8%;
+    align-items: center;
+}
