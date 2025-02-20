@@ -27,5 +27,16 @@
       "Mēslojuma vid. cena": "---",
       "Ieteicamais augsnes daudzums (litros)": 3,
       "Level": "1/5☆"
+    },
+    {
+      "Name": "Orhideja",
+      "Augsne": "Gatavā kaktusa augsne",
+      "Mēslojums": "Nav obligāts",
+      "Stāda vid. cena": "6.00€",
+      "Augsnes vid. cena": "1.99€",
+      "Mēslojuma vid. cena": "---",
+      "Ieteicamais augsnes daudzums (litros)": 3,
+      "Grūtības skala skala": "1/5☆",
+      "Ieteicamā temperatūra": "18°-24°"
     }
   ]}

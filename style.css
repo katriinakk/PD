@@ -166,7 +166,7 @@ p{
     font-size: 100%;
     color: honeydew;
     font-family: "Optima", "Geneva", sans-serif;
-    top: 25%;
+    top: 18%;
     left:2%;
     background-color: indianred;
     border-radius: 10px;
@@ -175,6 +175,8 @@ p{
 a{
     text-decoration: none;
     text-align: center;
+    font-size: 100%;
+    font-family: "Optima", "Geneva", sans-serif;
 }
 .grid2 {
     position: relative;
@@ -199,4 +201,28 @@ a{
     border-radius: 15px;
     padding: 8%;
     align-items: center;
+}
+
+.work a {
+    position: absolute;
+    font-size: 100%;
+    color: honeydew;
+    font-family: "Optima", "Geneva", sans-serif;
+    top: 25%;
+    left:2%;
+    background-color: indianred;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.div5 {
+    background: rgb(107,142,35);
+    background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
+    border-radius: 15px;
+    color: HoneyDew;
+    font-family: "Optima", "Geneva", sans-serif;
+    width: auto;
+    padding: 3%;
+    font-size: 160%;
+    text-align: center;
 }

@@ -9,7 +9,7 @@
     </head>
         
     <body>
-        <div class = "div1">Citronkoks</div>
+        <div class = "div5">Citronkoks</div>
         <div class="main"><img src="lemon.png">
 
         <a class="main" href="index.html">←Atpakaļ←</a>
@@ -27,18 +27,21 @@
             let list = [{
                 "Augsne": "1/5 perlīts, 1/5 komposts, 3/5 kokosšķiedras",
                 "Mēslojums": "Citrusaugu mēslojums",
-                "Auga vid. cena": "37.00€",
+                "Stāda vid. cena": "37.00€",
                 "Mēslojuma vid. cena": "5.00€",
                 "Augsnes vid. cena": "15.12€",
                 "Ieteicamais augsnes daudzums (litros)": 20,
-                "Iesācēju draudzīguma skala": "2.5/5☆"
+                "grūtības skala": "2.5/5☆",
+                "Ieteicamā temperatūra": "10°-21°"
             }]
             function delet() {
                 const element = document.getElementById("demo")
                 element.remove()
                 document.getElementById("a").innerHTML = "Vispārīgā informācija"
                 document.getElementById("b").innerHTML = "Ieteikumi"
-                document.getElementById("c").innerHTML = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>"
+                document.getElementById("c").innerHTML = "Citronkokam ir jāstāv 6 līdz 8 stundas gaismā katru dienu,<br>tos ir jālaista, kad augsne ir sausa 5cm dziļumā.<br>Citronkokus nevajadzētu turēt tuvu pie siltuma avotiem (piemēram, radiātoriem)."
+                document.getElementById("d").innerHTML = "Atsauces"
+                document.getElementById("e").innerHTML = "Leahy M. (2024). <i>How to care for a lemon tree.</i> Pieejams: <a>https://www.wikihow.com/Care-for-a-Lemon-Tree</a>"
             }
             function Table(selector) {
             // Getting the all column names
@@ -86,8 +89,9 @@
         </table>
 
         <h1 id="b"></h1>
-
         <p id="c"></p>
+        <h1 id="d"></h1>
+        <p id="e"></p>
 
     </body>
 
