@@ -3,21 +3,21 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css"/>
-        <title>Citronkoks</title> 
+        <title>Venēras mušķērājs</title> 
         <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
        </script>
     </head>
         
     <body>
-        <div class = "div5">Orhideja</div>
-        <div class="main"><img src="orh.png">
+        <div class = "div5">Venēras mušķērājs</div>
+        <div class="main"><img src="ven.jpg">
 
         <a class="main" href="index.html">←Atpakaļ←</a>
  
         <!--https://www.w3schools.com/js/js_output.asp-->
-        <p >Orhideja ir viens no visskaistākajām eksotiskajiem augiem, ko var audzēt mājās. Tam<br>
-            piemīt interesanti un krāsaini ziedi, un katra suga ir citāda. Orhidejai arī piemīt kulturāla<br>
-            nozīme dažādās tautās, tāpēc daudzi grib iegādāties un rūpēties par tiem.<br></p>
+        <p >Venēras mušķērājs ir ļoti īpašs un savāds augs. Tas ir viens no retajiem augiem, kurš<br>
+            spēj "medīt" pats sev pārtiku. Skatīties, kā mušķērājs to dara, var sagādāt gandarījumu,<br>
+            taču par tiem ir arī jāspēj rūpēties, kas var izrādīties netik viegli.<br></p>
         </div>
         <br>
         <hr>
@@ -25,23 +25,23 @@
         <script>
             let tabula = document.getElementById("a");
             let list = [{
-                "Augsne": "Augsnes maisījums orhidejām",
-                "Mēslojums": "NPK 20-20-20 vai mēslojums orhidejām",
-                "Stāda vid. cena": "28.00€",
-                "Mēslojuma vid. cena": "1.00€",
-                "Augsnes vid. cena": "3.10€",
+                "Augsne": "2/3 sfagnu kūdras sūna un 1/3 smilts vai perlīts",
+                "Mēslojums": "Nav obligāts",
+                "Stāda vid. cena": "18.00€",
+                "Augsnes vid. cena": "3.80€",
+                "Mēslojuma vid. cena": "---",
                 "Ieteicamais augsnes daudzums (litros)": 2,
-                "grūtības skala": "2.5/5☆",
-                "Ieteicamā temperatūra": "16°-29°"
-            }]
+                "Grūtības skala skala": "4/5☆",
+                "Ieteicamā temperatūra": "0°-30°"}
+            ]
             function delet() {
                 const element = document.getElementById("demo")
                 element.remove()
                 document.getElementById("a").innerHTML = "Vispārīgā informācija"
                 document.getElementById("b").innerHTML = "Ieteikumi"
-                document.getElementById("c").innerHTML = "Orhidejai varaj pavadīt 6 stundas (netiešā) gaismā katru dienu,<br>Tas ir jālaista, kad augsne ir gandrīz sausa. Sausumu var pārbaudīt pacilājot puķupodu<br>un nosakot mitruma daudzumu pēc svara. Ir ļoti būtiski Orhideju nepārlaistīt."
+                document.getElementById("c").innerHTML = "Venēras mušķērāju var laistīt tikai ar destilētu ūdeni.<br>Vajag izvairīties laistīt to no augšas (uz augsnes virsmas),<br>tā vietā jāielej 1cm ūdens tā trauciņā.<br>Ziemā augam vajag aukstu klimatu, tāpēc tas būs jānovieto aukstākā vietā.<br>Ja augs aug iekšā, ir liela varbūtība, ka tas neko nenoķers,<br>tāpēc visādus kukaiņus būs jāmedī un jābaro pašam.<br>Barot mušķērāju ar kukaiņiem ir pēdējais pienākums, par ko uztraukties,<br>sākumā augam ir jānodrošina pareizu mitrumu un klimatu."
                 document.getElementById("d").innerHTML = "Atsauces"
-                document.getElementById("e").innerHTML = "Buiano M. (2025). <i>How to Grow and Care for an Orchid So It Blooms for Years to Come.</i> Pieejams: <a>https://www.marthastewart.com/2124479/orchid-care-tips<a>"
+                document.getElementById("e").innerHTML = "Bennet T. (2025). <i>The Venus Flytrap: Complete Care Guide.</i> Pieejams: <i>https://tomscarnivores.com/resources/venus-flytrap-complete-guide/</i>"
             }
             function Table(selector) {
             // Getting the all column names

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css"/>
+        <title>Antūrijs</title> 
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+       </script>
+    </head>
+        
+    <body>
+        <div class = "div5">Antūrijs</div>
+        <div class="main"><img src="ant.PNG">
+
+        <a class="main" href="index.html">←Atpakaļ←</a>
+ 
+        <!--https://www.w3schools.com/js/js_output.asp-->
+        <p>Antūrijs izpaužas ar savu spilgti sarkano ziedu krāsu, padarot to par vienu no<br>
+            labākajiem mājas dekoriem. To krāsu kombinācija ar dzelteno un zaļu izskatas ļoti<br>
+            labi. Tas ir pārsvarā pieejams kā mākslīgs zieds, taču īsts izskatītos vēl labāk.<br></p>
+        </div>
+        <br>
+        <hr>
+        <!--https://www.geeksforgeeks.org/how-to-convert-json-data-to-a-html-table-using-javascript-jquery/-->
+        <script>
+            let tabula = document.getElementById("a");
+            let list = [{
+                "Augsne": "1/2 augsnes maisījums orhidejām un 1/2 augsne telpaugiem",
+                "Mēslojums": "NPK 10-10-10",
+                "Stāda vid. cena": "25€",
+                "Augsnes vid. cena": "6€",
+                "Mēslojuma vid. cena": "3.20",
+                "Ieteicamais augsnes daudzums (litros)": 6,
+                "Grūtības skala skala": "3/5☆",
+                "Ieteicamā temperatūra": "18°-29°"
+                }
+            ]
+            function delet() {
+                const element = document.getElementById("demo")
+                element.remove()
+                document.getElementById("a").innerHTML = "Vispārīgā informācija"
+                document.getElementById("b").innerHTML = "Ieteikumi"
+                document.getElementById("c").innerHTML = "Neļaut antūrijam izžūt pilnībā, laistīt tos vienreiz nedēļā vai kad augsne augšpusē ir sausa.<br>Augs smagi cietīs temperatūrā zem 16°<br>Antūrijs ir toksisks, tā sula var kairināt acis un tās lapas/ziedus nedrīkst ēst,<br>tāpēc tos vajag turēt drošā vietā, kur nevar tikt dzīvnieki un bērni.<br>Augam ir jānodrošina netieša gaisma, to nedrīkst turēt zem stipra gaismas avota"
+                document.getElementById("e").innerHTML = "Fadhil F. (2022) <i>What Is The Best Fertilizer For Anthurium Plants?</i> Pieejams: <i>https://greenspaces.id/blogs/news/what-is-the-best-fertilizer-for-anthurium-plants?srsltid=AfmBOooPTuGwqJB0DCJZLPLxo556g4QXkoS7sLu0o4aT0f7b6XasGQv3</i><br>VanZile J. (2025). <i>How to Grow and Care for Anthurium.</i> Pieejams: <i>https://www.thespruce.com/grow-anthurium-plants-1902738</i>"
+            }
+            function Table(selector) {
+            // Getting the all column names
+            let cols = Headers(list, selector);
+                // Traversing the JSON data
+                for (let i = 0; i < list.length; i++) {
+                    let row = $('<tr/>');
+                        for (let colIndex = 0; colIndex < cols.length; colIndex++) {
+                            let val = list[i][cols[colIndex]];
+                            row.append($('<td/>').html(val));
+                        }
+                    // Adding each row to the table
+                    $(selector).append(row);
+                }
+            }
+            function Headers(list, selector) {
+                let columns = [];
+                let header = $('<tr/>');
+                for (let i = 0; i < list.length; i++) {
+                    let row = list[i];
+                    for (let k in row) {
+                        if ($.inArray(k, columns) == -1) {
+                        columns.push(k);
+                        // Creating the header
+                        header.append($('<th/>').html(k));
+                        }
+                    }
+                }
+                $(selector).append(header);
+                return columns;
+            }
+        </script>
+
+        <h1 id="a"></h1>
+
+        <div class="container">
+            <div class="center">
+                <button class="main" id="demo" onclick="delet('#button');Table('#table')">
+                    ↓Papildus informācija↓
+                </button>
+            </div>
+        </div>
+
+        <table align="center" id="table">
+        </table>
+
+        <h1 id="b"></h1>
+        <p id="c"></p>
+        <h1 id="d"></h1>
+        <p id="e"></p>
+
+    </body>
+
+</html>
