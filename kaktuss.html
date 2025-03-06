@@ -39,21 +39,18 @@
                 element.remove()
                 document.getElementById("a").innerHTML = "Vispārīgā informācija"
                 document.getElementById("b").innerHTML = "Ieteikumi"
-                document.getElementById("c").innerHTML = "kaktusu ir jānoliek saulainā vietā, piemēram, uz palodzes,<br>vasarā tos ir jālaista ik pēc 1-2 nedēļām, bet citās sezonās - vienreiz 4 līdz 6 nedēļās.<br>Censties nepārlaistī kaktusu."
+                document.getElementById("c").innerHTML = "Kaktusu ir jānoliek saulainā vietā, piemēram, uz palodzes,<br>vasarā tos ir jālaista ik pēc 1-2 nedēļām, bet citās sezonās - vienreiz 4 līdz 6 nedēļās.<br>Censties nepārlaistī kaktusu."
                 document.getElementById("d").innerHTML = "Atsauces"
-                document.getElementById("e").innerHTML = "Blumberg, P. O. (2024). <i>7 expert tips to take care of your cacti.</i> Pieejams: <i>https://www.southernliving.com/garden/plants/cactus-care-tips</i><br>Gruber, B. (2024). <i>What Temperatures can Cacti Survive?.</i> Pieejams: <i>https://varnishandvine.com/blogs/cactus-and-plant-information/what-temperatures-can-cacti-survive</i>"
+                document.getElementById("e").innerHTML = "Blumberg, P. O. (2024). <i>7 expert tips to take care of your cacti.</i> Pieejams: <i><a>https://www.southernliving.com/garden/plants/cactus-care-tips</a></i><br>Gruber, B. (2024). <i>What Temperatures can Cacti Survive?.</i> Pieejams: <i>https://varnishandvine.com/blogs/cactus-and-plant-information/what-temperatures-can-cacti-survive</i>"
             }
             function Table(selector) {
-            // Getting the all column names
             let cols = Headers(list, selector);
-                // Traversing the JSON data
                 for (let i = 0; i < list.length; i++) {
                     let row = $('<tr/>');
                         for (let colIndex = 0; colIndex < cols.length; colIndex++) {
                             let val = list[i][cols[colIndex]];
                             row.append($('<td/>').html(val));
                         }
-                    // Adding each row to the table
                     $(selector).append(row);
                 }
             }
@@ -65,7 +62,6 @@
                     for (let k in row) {
                         if ($.inArray(k, columns) == -1) {
                         columns.push(k);
-                        // Creating the header
                         header.append($('<th/>').html(k));
                         }
                     }

@@ -2,6 +2,7 @@ body {
     background: rgb(240,255,240);
     background: radial-gradient(circle, rgba(240,255,240,1) 60%, rgba(236,255,196,1) 100%);
 }
+.mainn {margin: 0; height: 100%; overflow: hidden}
 .div1 {
     background: rgb(107,142,35);
     background: radial-gradient(circle, rgba(107,142,35,1) 23%, rgba(212,183,64,1) 200%);
@@ -10,7 +11,7 @@ body {
     font-family: "Optima", "Geneva", sans-serif;
     width: auto;
     padding: 5%;
-    font-size: 160%;
+    font-size: 200%;
     text-align: center;
 }
 .div2 {
@@ -223,6 +224,6 @@ a{
     font-family: "Optima", "Geneva", sans-serif;
     width: auto;
     padding: 3%;
-    font-size: 160%;
+    font-size: 200%;
     text-align: center;
 }
